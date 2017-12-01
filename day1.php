@@ -19,7 +19,7 @@ $substart = microtime(true);
 $sum2 = 0;
 $length /= 2;
 for ($index = 0; $index < $length; $index++)
-	if ($input[$index] == $input[($index + $length / 2) % $length])
+	if ($input[$index] == $input[$index + $length])
 		$sum2 += (int)$input[$index];
 $sum2 *= 2;
 $end = microtime(true);
