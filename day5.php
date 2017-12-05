@@ -1,6 +1,4 @@
 <?php
-set_time_limit(.01);
-
 $input = explode("\n", file_get_contents("./input/day5.txt"));
 $length = count($input);
 
