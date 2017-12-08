@@ -15,9 +15,9 @@ do {
 			$highest = $blocks;
 			$index = $bank;
 		}
-	$banks[$index] = 0;
+	$banks[$index++] = 0;
 	for ($block = 0; $block < $highest; $block++)
-		$banks[($index + $block + 1) % $length]++;
+		$banks[($index + $block) % $length]++;
 	$check = implode(',', $banks);
 } while (!in_array($check, $results));
 echo "Part 1: Cycles needed = ".(count($results) + 1)."\n";

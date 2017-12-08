@@ -20,6 +20,7 @@ echo "Part 1: Distance = $distance\n";
 
 $value = 0;
 $prevsquare = 1;
+global $items;
 $items = [ 0 => [ 0 => 1 ] ];
 function additem($atx, $aty) {
 	global $items;
