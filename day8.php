@@ -1,7 +1,6 @@
 <?php
 $input = explode("\n", file_get_contents("./input/day8.txt"));
 
-$cmds = [];
 $registers = [];
 $max = 0;
 foreach ($input as $idx => $line) {
@@ -19,7 +18,7 @@ foreach ($input as $idx => $line) {
 		case ">=": $result = $cmp >= $val; break;
 		case "==": $result = $cmp == $val; break;
 		case "!=": $result = $cmp != $val; break;
-		default: echo "Error - unknown op: $op\n";
+		default: echo "Error - unknown: $op\n";
 	}
 	if ($result) {
 		$registers[$reg] += $act == 'inc' ? $num : -$num;
@@ -30,9 +29,3 @@ foreach ($input as $idx => $line) {
 asort($registers);
 echo "Part 1: Highest register value at end = ".array_pop($registers)."\n";
 echo "Part 2: Highest register during process = $max\n";
-/**
- * Created by PhpStorm.
- * User: Peter
- * Date: 8-12-2017
- * Time: 10:34
- */
